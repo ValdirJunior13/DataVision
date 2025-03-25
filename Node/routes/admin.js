@@ -5,7 +5,7 @@ router.get('/admin', (req, res) => {
     res.send('User Page');
 });
 
-router.post('/admin', (res, res) => {
+router.post('/admin', (res, req) => {
     res.send('Login Page');
 })
 
