@@ -1,0 +1,9 @@
+Pode rodar o banco com o docker-compose.yml na raiz do projeto, ou rodar localmente o banco de dados.
+Se for rodar com o docker, e so instalar o docker desktop e rodar o "docker compose up -d" na pasta do projeto.
+Criar um arquivo .env na raiz do projeto com as variáveis de ambiente necessárias, tem um ".env.example" de exemplo.
+
+npm install  # Instala dependências (prisma, @prisma/client, etc.)
+npx prisma generate  # Gera o cliente do Prisma
+npx prisma migrate dev  # Roda as migrations e aplica ao banco 
+
+"node app.js" para Rodar aplicação

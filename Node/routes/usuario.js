@@ -1,12 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const usuarios = require("../models/usuarios");
-const { verificarToken } = require("../models/jwt");
+const usuarioController = require("./controllers/usuarioController.js");
 
-
-router.get('/user/:id', verificarToken, usuarios.buscarUsuarios);
-router.post('/user', usuarios.inserirUsuario);
-router.put('/user/:id', verificarToken, usuarios.atualizarUsuario);
-router.delete('/user/:id', verificarToken, usuarios.deletarUsuario);
+router.get('/user/:id', usuarioController.getUserById);
+router.post('/user', usuarioController.createUser);
+router.put('/user/:id', usuarioController.updateUser);
+router.delete('/user/:id', usuarioController.deleteUser);
 
 module.exports = router;
