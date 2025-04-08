@@ -1,11 +1,17 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRouter = require('./Node/routes/usuario');
 const adminRouter = require('./Node/routes/admin');
 const errorHandler = require('./Node/middlewares/errorHandler');
 const limiter = require('./Node/middlewares/rateLimiter');
+const cors = require('cors');
 
 const app = express();
+
+
+export default App;
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter); 

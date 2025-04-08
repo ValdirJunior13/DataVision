@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/ValdirJunior13/DataVision#readme",
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/register": "^7.25.9",
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
